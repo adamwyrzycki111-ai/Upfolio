@@ -40,6 +40,12 @@ function ProductCard({ product, onCopy }) {
           <p className="product-card-description">
             {product.description}
           </p>
+
+          {product.launch_date && (
+            <p className="product-card-launch-date">
+              Launched: {product.launch_date}
+            </p>
+          )}
           
           <div className="product-card-features">
             {product.features?.slice(0, 3).map((feature, i) => (
